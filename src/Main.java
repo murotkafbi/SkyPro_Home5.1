@@ -9,6 +9,7 @@ public class Main {
             task3();
             task4();
             task5();
+            task6();
 
 
         }
@@ -53,32 +54,46 @@ public class Main {
         }
 
         private static boolean isLeapYear(int year) {
-            return year % 4 == 0 && year % 100 != 0 || year % 400 ==0;
-
-            }
-            public static void task5() {
-
-            }
-            private static void  printInfoAboutVersion(int os,
-                int productionYear){
-            if (os < 0  || os >1){
-                System.out.println("OC должна бытьь равна 0 или 1!");
-                }
-                int currentYear = LocalDate.now().getYear();
-            StringBuilder result = new StringBuilder("Утсановите ") ;
-            if (productionYear < currentYear) {
-                result.append("облегченную версию для ");
-            }else {
-                result.append("версию для");
-            }
-            if (os==0){
-                result.append("iso");
-            }else {
-                result.append("Android");
-            }
-                System.out.println(result);
-            }
-
+            return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
 
         }
-    }
+
+        public static void task5() {
+
+        }
+
+        private static void printInfoAboutVersion(int os, int productionYear) {
+            if (os < 0 || os > 1) {
+                System.out.println("OC должна бытьь равна 0 или 1!");
+            }
+            int currentYear = LocalDate.now().getYear();
+            StringBuilder result = new StringBuilder("Утсановите ");
+            if (productionYear < currentYear) {
+                result.append("облегченную версию для ");
+            } else {
+                result.append("версию для");
+            }
+            if (os == 0) {
+                result.append("iso");
+            } else {
+                result.append("Android");
+            }
+            System.out.println(result);
+        }
+
+        private static void task6() {
+            System.out.println("Задание 6");
+        }
+            int deliveryDisctance=105;
+         int days calculateDeliveryDays(deliveryDistance);
+         if(days==-1){
+            System.out.println("Доставка невозможна на расстояние " + deliveryDisctance +" км");
+        }else {
+            System.out.println("Время доставки " + days + " дн.");
+        }
+
+
+            }
+        }
+
+
